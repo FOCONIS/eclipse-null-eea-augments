@@ -45,16 +45,24 @@
       <name>Please see https://github.com/lastnpe/eclipse-null-eea-augments/graphs/contributors</name>
     </contributor>
   </contributors>
-
-  <distributionManagement>
-    <!-- http://central.sonatype.org/pages/apache-maven.html -->
-    <snapshotRepository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-    <!-- <repository> isn't needed with nexus-staging-maven-plugin, it somehow
-         has this hard-coded or automatically find sit somehow, IFF <version> is non-SNAPSHOT -->
-  </distributionManagement>
+	<distributionManagement>
+		<!-- 
+		<site>
+			<id>foconis-zak-site</id>
+			<url>sftp://bamboo@repo.foconis.de/var/www/html/repo/sites/de.foconis.jfof/foconis-parent</url>
+		</site>
+		 -->
+		<repository>
+			<id>foconis-release</id>
+			<name>FOCONIS Release Repository</name>
+			<url>sftp://bamboo@repo.foconis.de/var/www/html/repo/maven-release/</url>
+		</repository>
+		<snapshotRepository>
+			<id>foconis-snapshot</id>
+			<name>FOCONIS Snapshot Repository</name>
+			<url>sftp://bamboo@repo.foconis.de/var/www/html/repo/maven-snapshot/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
   <properties>
     <java.version>1.8</java.version>
@@ -62,6 +70,13 @@
   </properties>
 
   <build>
+	<extensions>
+		<extension>
+			<groupId>org.apache.maven.wagon</groupId>
+			<artifactId>wagon-ssh</artifactId>
+			<version>2.12</version>
+		</extension>
+	</extensions>
     <!-- NB: Similar configuration also in examples/maven/jdt-ecj-settings/pom.xml -->
     <resources>
       <resource>
@@ -110,17 +125,7 @@
         </executions>
       </plugin>
       <!-- Intentionally no maven-source-plugin & maven-javadoc-plugin; as not needed for EEA here! -->
-      <plugin>
-        <groupId>org.sonatype.plugins</groupId>
-        <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>1.6.7</version>
-        <extensions>true</extensions>
-        <configuration>
-          <serverId>ossrh</serverId>
-          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-          <autoReleaseAfterClose>true</autoReleaseAfterClose>
-        </configuration>
-      </plugin>
+
     </plugins>
   </build>
 
