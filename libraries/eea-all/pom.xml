@@ -117,6 +117,12 @@
       <version>6.2</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.ow2.asm</groupId>
+      <artifactId>asm-commons</artifactId>
+      <version>6.2</version>
+      <scope>test</scope>
+    </dependency>
     <!-- list all artifacts, where we provide eea as test scope -->
     <dependency>
       <groupId>com.google.guava</groupId>

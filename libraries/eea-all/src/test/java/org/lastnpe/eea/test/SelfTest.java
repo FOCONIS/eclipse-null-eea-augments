@@ -2,6 +2,9 @@ package org.lastnpe.eea.test;
 
 import static org.junit.Assert.*;
 
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.List;
 
 import org.junit.Test;
@@ -18,9 +21,21 @@ public class SelfTest {
   /**
    * Should we list missing methods.
    */
-  private static boolean LIST_MISSING = false;
+  protected static boolean LIST_MISSING = false;
+  
+  // modify this line and run the class in eclipse (right click/run java application)
+  private static final Class<?> CLASS_TO_TEST = LocalDateTime.class;
+  
+  public static void main(String[] args) throws IOException {
+    if (new SelfTest().checkEea(CLASS_TO_TEST.getName().replace('.','/')+".eea")) {
+      System.out.println(CLASS_TO_TEST + " is OK");
+    }
+  }
+
+  
   private final EeaScanner scanner = new EeaScanner();
 
+  
   @Test
   public void testEeaConsistency() throws Exception {
     boolean ok = true;
