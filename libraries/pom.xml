@@ -220,5 +220,6 @@
     <module>spring</module>
     <module>osgi-core</module>
 	<module>javamail</module>
+	<module>apache-commons</module>
   </modules>
 </project>

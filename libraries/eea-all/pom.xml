@@ -104,6 +104,12 @@
       <version>${project.version}</version>
     </dependency>
 
+    <dependency>
+      <groupId>org.lastnpe.eea</groupId>
+      <artifactId>apache-commons-eea</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+	
     <!-- test scope - for consistency checker -->
     <dependency>
       <groupId>junit</groupId>
@@ -156,6 +162,20 @@
       <groupId>org.osgi</groupId>
       <artifactId>org.osgi.core</artifactId>
       <version>6.0.0</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.5</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.5</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
