@@ -221,5 +221,6 @@
     <module>osgi-core</module>
 	<module>javamail</module>
 	<module>apache-commons</module>
+    <module>verify-eea</module>
   </modules>
 </project>

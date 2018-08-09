@@ -43,7 +43,7 @@ getClasses
  ()[1Ljava/lang/Class<*>;
 getComponentType
  ()Ljava/lang/Class<*>;
- ()L0java/lang/Class<*>;
+ ()Ljava/lang/Class<*>;
 getConstructor
  ([Ljava/lang/Class<*>;)Ljava/lang/reflect/Constructor<TT;>;
  ([1Ljava/lang/Class<*>;)L1java/lang/reflect/Constructor<TT;>;

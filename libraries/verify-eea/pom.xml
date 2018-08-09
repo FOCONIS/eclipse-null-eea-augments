@@ -8,11 +8,11 @@
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>all-eea</artifactId>
+  <artifactId>verify-eea</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
-  <name>Eclipse External null Annotations (EEA) all-in-one</name>
+  <name>Eclipse External null Annotations (EEA) Verify</name>
 
   <build>
     <plugins>
@@ -44,79 +44,14 @@
           </execution>
         </executions>
       </plugin>
-    <!--   <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-shade-plugin</artifactId>
-        <version>3.1.0</version>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>shade</goal>
-            </goals>
-            <configuration>
-              <filters>
-                <filter>
-                  <artifact>*:*</artifact>
-                  <includes>
-                    <include>**/*.eea</include>
-                    <include>eea-for-gav</include>
-                  </includes>
-                </filter> 
-              </filters>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin> -->
     </plugins>
   </build>
 
   <dependencies>
     <dependency>
       <groupId>org.lastnpe.eea</groupId>
-      <artifactId>jdk-eea</artifactId>
+      <artifactId>all-eea</artifactId>
       <version>0.0.1-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>org.lastnpe.eea</groupId>
-      <artifactId>guava-eea</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>org.lastnpe.eea</groupId>
-      <artifactId>mockito-eea</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>org.lastnpe.eea</groupId>
-      <artifactId>slf4j-api-eea</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>org.lastnpe.eea</groupId>
-      <artifactId>spring-eea</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>org.lastnpe.eea</groupId>
-      <artifactId>javamail-eea</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>org.lastnpe.eea</groupId>
-      <artifactId>apache-commons-eea</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>org.lastnpe.eea</groupId>
-      <artifactId>osgi-core-eea</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.lastnpe.eea</groupId>
-      <artifactId>apache-commons-eea</artifactId>
-      <version>${project.version}</version>
     </dependency>
 	
     <!-- test scope - for consistency checker -->
