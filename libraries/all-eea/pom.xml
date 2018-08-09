@@ -10,7 +10,7 @@
 
   <artifactId>all-eea</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <name>Eclipse External null Annotations (EEA) all-in-one</name>
 
