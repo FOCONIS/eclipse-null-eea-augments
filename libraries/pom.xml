@@ -212,7 +212,7 @@
   </profiles>
 
   <modules>
-    <module>eea-all</module>
+    <module>all-eea</module>
     <module>java</module>
     <module>slf4j-api</module>
     <module>mockito</module>
