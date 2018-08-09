@@ -55,7 +55,7 @@
               <goal>shade</goal>
             </goals>
             <configuration>
-			              <transformers>
+			  <transformers>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                   <resource>eea-for-gav</resource>
                 </transformer>
