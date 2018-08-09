@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -29,6 +30,7 @@ public class SelfTest {
     if (new SelfTest().checkEea(CLASS_TO_TEST.getName().replace('.','/')+".eea")) {
       System.out.println(CLASS_TO_TEST + " is OK");
     }
+    
   }
 
   
@@ -36,13 +38,14 @@ public class SelfTest {
 
   
   @Test
+  //@Ignore("Rolands needs to check this again")
   public void testEeaConsistency() throws Exception {
     boolean ok = true;
     for (String eea : scanner.getEeaFiles()) {
       ok &= checkEea(eea);
     }
     if (!ok) {
-      fail("There were eea inconsistences detected");
+      fail("There were eea inconsistencies detected");
     }
   }
 

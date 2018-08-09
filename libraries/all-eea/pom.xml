@@ -8,8 +8,7 @@
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
-  <groupId>org.lastnpe.eea</groupId>
-  <artifactId>eea-all</artifactId>
+  <artifactId>all-eea</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
@@ -56,11 +55,16 @@
               <goal>shade</goal>
             </goals>
             <configuration>
+			              <transformers>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                  <resource>eea-for-gav</resource>
+                </transformer>
+              </transformers>
               <filters>
                 <filter>
                   <artifact>*:*</artifact>
                   <excludes>
-                    <exclude>eea-for-gav</exclude>
+                    <!-- <exclude>eea-for-gav</exclude> -->
                     <exclude>dependency-reduced-pom.xml</exclude>
                   </excludes>
                 </filter>
@@ -96,6 +100,16 @@
     <dependency>
       <groupId>org.lastnpe.eea</groupId>
       <artifactId>spring-eea</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.lastnpe.eea</groupId>
+      <artifactId>javamail-eea</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.lastnpe.eea</groupId>
+      <artifactId>apache-commons-eea</artifactId>
       <version>0.0.1-SNAPSHOT</version>
     </dependency>
     <dependency>
@@ -142,6 +156,14 @@
       <artifactId>spring-beans</artifactId>
       <version>4.3.17.RELEASE</version>
       <scope>test</scope>      
+    </dependency>
+    
+    <dependency>
+    	<groupId>com.sun.mail</groupId>
+    	<artifactId>javax.mail</artifactId>
+    	<version>1.6.0</version>
+    	<scope>test</scope>
+    	
     </dependency>
 
     <dependency>
