@@ -212,7 +212,7 @@
   </profiles>
 
   <modules>
-    <module>all-eea</module>
+    <module>eea-all</module>
     <module>java</module>
     <module>slf4j-api</module>
     <module>mockito</module>
@@ -221,6 +221,5 @@
     <module>osgi-core</module>
 	<module>javamail</module>
 	<module>apache-commons</module>
-    <module>verify-eea</module>
   </modules>
 </project>
